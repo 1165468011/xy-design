@@ -1,0 +1,49 @@
+{
+  "name": "xy-design",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue,.ts,.json --ignore-path .gitignore . --fix",
+    "postinstall": "npx pnpm husky install"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.5.0",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.6",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.0",
+    "vue-demi": "^0.13.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@types/lodash": "^4.14.188",
+    "@typescript-eslint/parser": "^5.42.1",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/compiler-sfc": "^3.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.27.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.7.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "sass": "^1.56.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.3",
+    "vite-plugin-compression": "^0.5.1",
+    "vue-tsc": "^1.0.9"
+  }
+}
