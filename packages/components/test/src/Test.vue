@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { defineEmits } from "vue-demi";
+
 const emit = defineEmits(["change"]);
 
 function onClick() {

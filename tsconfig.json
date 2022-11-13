@@ -16,7 +16,6 @@
     "removeComments": false,
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
-    "types": ["vite/client"],
     "rootDir": "."
   },
   "include": [

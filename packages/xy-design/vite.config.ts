@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
-import viteComperssion from "vite-plugin-compression";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,13 +14,13 @@ export default defineConfig({
       "@": resolve(__dirname, "src")
     }
   },
-  plugins: [
-    vue(),
-    viteComperssion({
-      algorithm: "gzip"
-    })
-  ],
+  plugins: [vue()],
   build: {
+    lib: {
+      entry: resolve(__dirname, "./index.ts"),
+      name: "xy-design",
+      fileName: "xy-design"
+    },
     rollupOptions: {
       external: ["vue"],
       output: {
