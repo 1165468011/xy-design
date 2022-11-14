@@ -16,15 +16,20 @@
     "lib": [
       "esnext",
       "dom"
-    ],
+    ]
   },
   "types": [
     "vite/client"
   ],
   "include": [
-    "packages/**/d.ts",
+    "packages/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
     "packages/**/src",
     "shims-vue.d.ts",
-    "Global.d.ts"
+    "Global.d.ts",
+  ],
+  "exclude": [
+    "packages/xy-design-v2"
   ]
 }

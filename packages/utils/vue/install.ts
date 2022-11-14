@@ -1,5 +1,5 @@
 import { NOOP } from "../common/core";
-import type { App, Directive, AppContext, Plugin } from "vue-demi";
+import type { App, Directive, AppContext, Plugin } from "vue";
 
 export type SFCWithInstall<T> = T & Plugin;
 

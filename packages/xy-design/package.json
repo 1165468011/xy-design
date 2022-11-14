@@ -21,7 +21,7 @@
   },
   "sideEffects": false,
   "typings": "types/index.d.ts",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "module": "lib/index.mjs",
   "style": "lib/style.css",
   "exports": {

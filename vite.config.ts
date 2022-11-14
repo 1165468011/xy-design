@@ -19,8 +19,24 @@ export default defineConfig({
     vue(),
     dts({
       outputDir: "./packages/xy-design/types",
+      skipDiagnostics: false,
       staticImport: true,
-      insertTypesEntry: true
+      insertTypesEntry: true,
+      beforeWriteFile: (filePath, content) => {
+        const path = filePath.split("types\\packages\\")[1];
+        const paths = path?.split("\\");
+        if (content.includes("@xy-design")) {
+          paths.length -= 1;
+          content = content.replace(
+            /@xy-design/g,
+            paths.map(() => "..").join("/")
+          );
+        }
+        return {
+          filePath,
+          content
+        };
+      }
     })
   ],
   build: {

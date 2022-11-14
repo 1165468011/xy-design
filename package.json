@@ -19,11 +19,11 @@
     "*.{ts,tsx,js,vue}": "npm run lint"
   },
   "dependencies": {
+    "@xy-design/components": "workspace:^0.0.1",
+    "@xy-design/utils": "workspace:^0.0.1",
     "@vue/composition-api": "^1.7.1",
     "@vueuse/core": "^9.5.0",
     "vue": "^3.2.0",
-    "@xy-design/components": "workspace:^0.0.1",
-    "@xy-design/utils": "workspace:^0.0.1",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.6",
     "lodash": "^4.17.21",
