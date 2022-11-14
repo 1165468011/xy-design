@@ -5,7 +5,9 @@
     "build": "pnpm build3 && pnpm build2",
     "build3": "npx vue-demi-switch 3 && vite build",
     "build2": "npx vue-demi-switch 2 && cd packages/xy-design-v2 && vite build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "cd packages/xy-design-v2 && npm i",
+    "publish": "cd packages/xy-design && npm publish"
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
