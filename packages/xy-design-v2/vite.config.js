@@ -18,8 +18,8 @@ export default defineConfig({
     minify: true,
     lib: {
       entry: resolve(__dirname, "../xy-design/index.ts"),
-      name: "xy-design",
-      fileName: "xy-design",
+      name: "index",
+      fileName: "index",
       formats: ["es", "cjs", "umd"]
     },
     rollupOptions: {

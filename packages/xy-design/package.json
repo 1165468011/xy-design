@@ -2,7 +2,7 @@
   "name": "@qq1165468011/xy-design",
   "private": false,
   "license": "MIT",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [
     "xy",
     "晓羊",
@@ -20,15 +20,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "sideEffects": false,
-  "typings": "types/xy-design.d.ts",
-  "main": "lib/index.es.js",
-  "module": "lib/index.es.js",
+  "typings": "types/index.d.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
   "style": "lib/style.css",
   "exports": {
     "./lib/style.css": "./lib/style.css",
     ".": {
-      "import": "./lib/xy-design.mjs",
-      "require": "./lib/xy-design.umd.js"
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.umd.js"
     }
   },
   "dependencies": {

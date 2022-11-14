@@ -27,8 +27,8 @@ export default defineConfig({
     outDir: "./packages/xy-design/lib/v3",
     lib: {
       entry: resolve(__dirname, "./packages/xy-design/index.ts"),
-      name: "xy-design",
-      fileName: "xy-design",
+      name: "index",
+      fileName: "index",
       formats: ["es", "cjs", "umd"]
     },
     rollupOptions: {
