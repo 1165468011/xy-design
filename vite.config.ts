@@ -4,7 +4,7 @@ import { existsSync, readdirSync, lstatSync, rmdirSync, unlinkSync } from "fs";
 import dts from "vite-plugin-dts";
 import vue from "@vitejs/plugin-vue";
 
-emptyDir(resolve(__dirname, "types"));
+emptyDir(resolve(__dirname, "./packages/xy-design/types"));
 // https://vitejs.dev/config/
 export default defineConfig({
   optimizeDeps: {
@@ -18,16 +18,15 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      outputDir: "types",
+      outputDir: "./packages/xy-design/types",
       staticImport: true,
-      insertTypesEntry: true,
-      logDiagnostics: true
+      insertTypesEntry: true
     })
   ],
   build: {
-    outDir: "../../lib/v3",
+    outDir: "lib/v3",
     lib: {
-      entry: resolve(__dirname, "./index.ts"),
+      entry: resolve(__dirname, "./packages/xy-design/index.ts"),
       name: "xy-design",
       fileName: "xy-design",
       formats: ["es", "cjs", "umd"]
@@ -50,7 +49,6 @@ function emptyDir(dir) {
 
   for (const file of readdirSync(dir)) {
     const abs = resolve(dir, file);
-
     if (lstatSync(abs).isDirectory()) {
       emptyDir(abs);
       rmdirSync(abs);

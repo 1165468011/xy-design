@@ -17,7 +17,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "sideEffects": false,
-  "typings": "types/index.d.ts",
+  "typings": "types/xy-design.d.ts",
   "main": "lib/index.es.js",
   "module": "lib/index.es.js",
   "style": "lib/style.css",
@@ -27,15 +27,6 @@
       "import": "./lib/xy-design.mjs",
       "require": "./lib/xy-design.umd.js"
     }
-  },
-  "dependencies": {
-    "@vueuse/core": "^9.5.0",
-    "vue": "^3.2.0",
-    "vue-demi": "^0.13.11",
-    "@vue/compiler-sfc": "^3.2.0",
-    "vite-plugin-dts": "^1.7.0",
-    "@vitejs/plugin-vue": "^3.2.0",
-    "vite": "^3.2.3"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.1.0",

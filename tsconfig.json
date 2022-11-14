@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": ".",
+    "rootDir": ".",
     "lib": [
       "esnext",
       "dom"
