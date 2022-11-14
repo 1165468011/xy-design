@@ -14,7 +14,7 @@ export default defineConfig({
   },
   plugins: [createVuePlugin()],
   build: {
-    outDir: "../../lib/v2",
+    outDir: "../xy-design/lib/v2",
     minify: true,
     lib: {
       entry: resolve(__dirname, "../xy-design/index.ts"),

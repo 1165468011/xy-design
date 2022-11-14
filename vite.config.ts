@@ -24,7 +24,7 @@ export default defineConfig({
     })
   ],
   build: {
-    outDir: "lib/v3",
+    outDir: "./packages/xy-design/lib/v3",
     lib: {
       entry: resolve(__dirname, "./packages/xy-design/index.ts"),
       name: "xy-design",
