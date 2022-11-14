@@ -1,4 +1,4 @@
-import { ref, reactive, computed, watch } from "vue";
+import { ref, reactive, computed, watch } from "vue-demi";
 
 /**
  * 验证码倒计时

@@ -1,11 +1,19 @@
-<script lang="ts" setup>
-import { defineEmits } from "vue-demi";
+<script lang="ts">
+import { defineComponent } from "vue-demi";
 
-const emit = defineEmits(["change"]);
+export default defineComponent({
+  name: "Test",
+  emits: ["change"],
+  setup(props, ctx) {
+    function onClick() {
+      ctx.emit("change", "11");
+    }
 
-function onClick() {
-  emit("change", "11");
-}
+    return {
+      onClick
+    };
+  }
+});
 </script>
 
 <template>
@@ -16,5 +24,8 @@ function onClick() {
 
 <style lang="scss" scoped>
 .test {
+  button {
+    color: red;
+  }
 }
 </style>

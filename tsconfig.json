@@ -1,27 +1,28 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "sourceMap": false,
-    "target": "es2016",
-    "useDefineForClassFields": false,
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "allowJs": false,
+    "declarationDir": "types",
+    "declaration": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "removeComments": false,
-    "jsx": "preserve",
-    "lib": ["esnext", "dom"],
-    "rootDir": "."
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
   },
+  "types": [
+    "vite/client"
+  ],
   "include": [
-    "packages/**/*.vue",
     "packages/**/d.ts",
-    "packages/*/src",
+    "packages/**/src",
     "shims-vue.d.ts",
     "Global.d.ts"
   ]
