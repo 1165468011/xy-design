@@ -7,7 +7,8 @@
     "build2": "npx vue-demi-switch 2 && cd packages/xy-design-v2 && vite build",
     "prepare": "husky install",
     "postinstall": "cd packages/xy-design-v2 && npm i",
-    "publish": "cd packages/xy-design && npm publish"
+    "publish": "cd packages/xy-design && npm publish",
+    "lint": "vue-tsc --noEmit --skipLibCheck && eslint --ext .js,.vue,.ts, --ignore-path .gitignore . --fix"
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
@@ -15,9 +16,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,vue,scss}": "prettier --write",
-    "*.{ts,tsx,js,vue}": "eslint --fix"
+    "*.{ts,tsx,js,vue}": "npm run lint"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.7.1",
     "@vueuse/core": "^9.5.0",
     "vue": "^3.2.0",
     "@xy-design/components": "workspace:^0.0.1",
