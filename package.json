@@ -2,19 +2,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "install2": "cd example/v2 && pnpm install",
-    "switch2": "node bin/vue-switch.js 2 && vue-demi-switch 2",
-    "switch3": "node bin/vue-switch.js 3 && vue-demi-switch 3",
-    "dev": "pnpm switch3 && vite --config vite.demo.js",
     "build": "pnpm build3 && pnpm build2",
     "build3": "npx vue-demi-switch 3 && vite build",
     "build2": "npx vue-demi-switch 2 && cd packages/xy-design-v2 && vite build",
-    "precommit": "lint-staged",
-    "lint-fix": "eslint --fix  --ext .vue,.js,.ts",
-    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
-    "format": "prettier-eslint --write src/**/*.{js,vue} && prettier-eslint --write",
-    "pretty": "pretty-quick --staged",
-    "lint": "eslint --ext .js,.vue,.ts,.json --ignore-path .gitignore . --fix",
     "prepare": "husky install"
   },
   "gitHooks": {
