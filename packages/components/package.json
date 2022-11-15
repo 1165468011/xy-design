@@ -5,6 +5,10 @@
   "license": "MIT",
   "main": "index.ts",
   "version": "0.0.1",
+  "dependencies": {
+    "vue": "^3.2.0",
+    "vue-demi": "^0.13.11"
+  },
   "peerDependencies": {
     "vue": "^3.2.0",
     "vue-demi": "^0.13.11"
